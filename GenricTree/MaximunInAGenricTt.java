@@ -20,7 +20,7 @@ public class MaximumInAGenrictt{
     }
   }
 
-  public static Node construct(int[] arr) {
+  public static Node construct(int[] arr){
     Node root = null;
 
     Stack<Node> st = new Stack<>();
