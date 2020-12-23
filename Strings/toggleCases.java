@@ -15,7 +15,7 @@ public class toggleCases {
 		return s.toString();
 	}
 	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in);
+		Scanner scn = new Scanner(System.in);+
 		String str = scn.next();
 		System.out.println(toggleCase(str));
 	}
