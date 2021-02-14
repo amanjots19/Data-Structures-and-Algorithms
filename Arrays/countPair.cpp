@@ -1,15 +1,34 @@
-    
-class Solution{   
-    int getPairsCount(int arr[], int n, int k) {
+#include<iostream>
+
+using namespace std;
+
+int getPairsCount(int arr[], int n, int k) {
         int count=0;
-        for(int i=0;i<arr.size()-1;i++){
-            for(int j=1;j<arr.size();j++){
-                if(arr[i]+arr[j]==k){
-                    count++;
-                }
+        int i=0,j=i+1;
+        while(i<n&&j<n){
+            int r=k-arr[i];
+            if(arr[j]==r){
+                i++;
+                j=i+1;
+                count++;
+            }else if(j==(n-1)){
+                i++;
+                j=i+1;
+            }else{
+                j++;
             }
         }
-            return count;
-            
+        return count;
+        
+}
+
+int main(){
+    int n; cin>>n;
+    int k; cin>>k;
+    int arr[n];
+    for(int i = 0; i<n;i++){
+        cin>>arr[i];
     }
- }
+    cout<< getPairsCount(arr,n,k)<<endl;
+    return 0;
+}
